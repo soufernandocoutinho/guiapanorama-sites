@@ -19,6 +19,7 @@ Repositório contendo o código-fonte das landing pages e páginas de captura de
 | **Franquia NextGo** | [`/ngsystem`](./ngsystem) | HTML5, CSS3, JS, Bootstrap, Meta Pixel, GTM |
 | **Assinatura Guia Panorama** | [`/assinatura`](./assinatura) | HTML5, CSS3, JS, Bootstrap, Meta Pixel, GTM |
 | **Loja de Sites Mobile** | [`/lojaonline`](./lojaonline) | HTML5, CSS3, JS, Bootstrap, Meta Pixel, GTM |
+| **Politica de Privacidade** | [`/politicadeprivacidade`](./politicadeprivacidade) | HTML5, CSS3, JS, Bootstrap, Meta Pixel, GTM |
 
 ---
 

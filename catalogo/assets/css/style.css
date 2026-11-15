@@ -1,0 +1,723 @@
+
+/* Estilos de :root. */
+/* Documentação: estilos da página, organizados por componente e comportamento responsivo. */
+:root{--ink:#172943;--muted:#61728a;--blue:#2864dc;--blue-dark:#194cae;--pale:#f4f7fc;--line:#e2e9f2;--teal:#19a79a;--violet:#805be7;--radius:20px;--shadow:0 16px 50px rgba(24,50,89,.09)}
+/* Estilos de *. */
+*{box-sizing:border-box}
+/* Estilos de html. */
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+/* Estilos de body. */
+body{margin:0;color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.65;font-size:16px}
+/* Estilos de a. */
+a{color:var(--blue)}
+/* Estilos de table-wrap. */
+a:focus-visible,button:focus-visible,.table-wrap:focus-visible{outline:3px solid #f3ae35;outline-offset:3px}
+/* Estilos de skip-link. */
+.skip-link{position:absolute;top:-60px;left:12px;background:#fff;padding:10px 15px;z-index:2000;border-radius:8px}
+/* Estilos de skip-link. */
+.skip-link:focus{top:10px}
+/* Estilos de site-header. */
+.site-header{background:rgba(255,255,255,.96);border-bottom:1px solid rgba(226,233,242,.8);backdrop-filter:blur(12px)}
+/* Estilos de navbar. */
+.navbar{min-height:76px}
+/* Estilos de navbar-brand. */
+.navbar-brand{display:flex;align-items:center;gap:10px;color:var(--ink);font-size:16px;font-weight:750;letter-spacing:-.03em}
+/* Estilos de navbar-brand. */
+.navbar-brand img{object-fit:contain;border-radius:12px}
+/* Estilos de navbar-brand. */
+.navbar-brand b{color:var(--blue)}
+/* Estilos de nav-link. */
+.nav-link{font-size:14px;font-weight:600;color:#52627a}
+/* Estilos de btn. */
+.btn{border-radius:10px;font-weight:700;letter-spacing:-.01em;min-height:44px;display:inline-flex;align-items:center;justify-content:center;gap:8px}
+/* Estilos de btn-primary. */
+.btn-primary{background:var(--blue);border-color:var(--blue);box-shadow:0 8px 18px rgba(40,100,220,.15)}
+/* Estilos de btn-primary, btn-primary. */
+.btn-primary:hover,.btn-primary:focus{background:var(--blue-dark);border-color:var(--blue-dark)}
+/* Estilos de btn-outline-primary. */
+.btn-outline-primary{color:var(--blue);border-color:#c7d5ed}
+/* Estilos de hero-section. */
+.hero-section{position:relative;overflow:hidden;background:radial-gradient(ellipse at 82% 44%,#e7efff 0%,#f8faff 35%,#f6f9fd 70%);padding:66px 0 74px}
+/* Estilos de hero-grid. */
+.hero-grid{display:grid;grid-template-columns:1.03fr .97fr;align-items:center;gap:36px;min-height:450px}
+/* Estilos de hero-copy. */
+.hero-copy{max-width:600px;position:relative;z-index:2}
+/* Estilos de eyebrow. */
+.eyebrow{display:inline-flex;align-items:center;gap:9px;text-transform:uppercase;letter-spacing:.12em;color:var(--blue);font-weight:800;font-size:11px}
+/* Estilos de eyebrow-dot. */
+.eyebrow-dot{width:8px;height:8px;background:var(--teal);border-radius:50%;box-shadow:0 0 0 5px rgba(25,167,154,.12)}
+/* Estilos de h1,h2,h3,p. */
+h1,h2,h3,p{margin-top:0}
+/* Estilos de hero-copy. */
+.hero-copy h1{font-size:clamp(2.55rem,5vw,4.35rem);line-height:1.08;letter-spacing:-.06em;font-weight:800;margin:20px 0}
+/* Estilos de hero-copy, section-heading, erp-feature-section. */
+.hero-copy h1 span,.section-heading h2 span,.erp-feature-section h2 span,.final-cta h2 span{color:var(--blue)}
+/* Estilos de hero-lead. */
+.hero-lead{font-size:18px;line-height:1.65;color:#40536c;max-width:560px}
+/* Estilos de hero-support. */
+.hero-support{font-size:14px;color:var(--muted);margin-bottom:0}
+/* Estilos de hero-assurances. */
+.hero-assurances{display:flex;flex-wrap:wrap;gap:20px;margin-top:27px;color:#435671;font-size:13px;font-weight:650}
+/* Estilos de hero-assurances. */
+.hero-assurances span{display:flex;align-items:center;gap:7px}
+/* Estilos de hero-assurances. */
+.hero-assurances i{font-style:normal;color:var(--teal);font-weight:900}
+/* Estilos de hero-art. */
+.hero-art{height:420px;position:relative;display:grid;place-items:center}
+/* Estilos de art-orbit. */
+.art-orbit{position:absolute;border:1px solid rgba(61,112,206,.14);border-radius:50%;transform:rotate(-22deg)}
+/* Estilos de orbit-one. */
+.orbit-one{width:440px;height:280px}
+/* Estilos de orbit-two. */
+.orbit-two{width:365px;height:365px;border-style:dashed}
+/* Estilos de dashboard-card. */
+.dashboard-card{position:relative;z-index:1;width:min(360px,82%);padding:18px;background:#fff;border:1px solid rgba(214,225,240,.9);border-radius:18px;box-shadow:0 30px 70px rgba(39,77,135,.19);transform:rotate(-2deg)}
+/* Estilos de dash-top. */
+.dash-top{display:flex;justify-content:space-between;align-items:center;font-weight:750;font-size:12px;margin-bottom:14px}
+/* Estilos de dash-brand. */
+.dash-brand{display:flex;align-items:center;gap:8px}
+/* Estilos de dash-mark. */
+.dash-mark{width:24px;height:24px;display:grid;place-items:center;border-radius:7px;background:#e9f0ff;color:var(--blue);font-weight:900}
+/* Estilos de dash-menu. */
+.dash-menu{color:#a8b4c4;letter-spacing:2px}
+/* Estilos de dash-banner. */
+.dash-banner{height:142px;border-radius:12px;padding:19px;color:white;background:linear-gradient(125deg,#254d96,#4c8fea 70%,#8fc5fa);position:relative;overflow:hidden}
+/* Estilos de dash-banner. */
+.dash-banner:after{content:"";position:absolute;width:150px;height:150px;border:1px solid #ffffff46;border-radius:50%;right:-12px;top:-24px;box-shadow:0 0 0 20px #ffffff12,0 0 0 42px #ffffff0a}
+/* Estilos de dash-banner. */
+.dash-banner small{display:block;font-size:8px;letter-spacing:.14em;opacity:.8}
+/* Estilos de dash-banner. */
+.dash-banner strong{display:block;font-size:22px;line-height:1.03;margin:11px 0;letter-spacing:-.04em}
+/* Estilos de dash-pill. */
+.dash-pill{font-size:8px;background:white;color:#2c5fa9;padding:5px 8px;border-radius:20px;font-weight:800}
+/* Estilos de dash-label. */
+.dash-label{display:flex;justify-content:space-between;margin:16px 1px 8px;font-weight:750;font-size:10px}
+/* Estilos de dash-label. */
+.dash-label span{color:var(--blue);font-size:9px}
+/* Estilos de product-row. */
+.product-row{display:grid;grid-template-columns:38px 1fr auto;align-items:center;gap:9px;padding:8px 0;border-top:1px solid #eef2f7;font-size:9px}
+/* Estilos de product-row, product-row. */
+.product-row b,.product-row small{display:block}
+/* Estilos de product-row. */
+.product-row small{color:#94a2b5;font-size:8px}
+/* Estilos de product-row. */
+.product-row>strong{font-size:9px}
+/* Estilos de product-pic. */
+.product-pic{width:36px;height:36px;display:grid;place-items:center;border-radius:9px;font-size:17px}
+/* Estilos de pic-a. */
+.pic-a{background:#fff0db;color:#c17e2b}
+/* Estilos de pic-b. */
+.pic-b{background:#e5f4f0;color:#228b78}
+/* Estilos de float-card. */
+.float-card{position:absolute;z-index:2;display:flex;align-items:center;gap:10px;padding:12px 14px;border:1px solid #e4ebf4;border-radius:13px;background:white;box-shadow:var(--shadow);font-size:10px}
+/* Estilos de float-card, float-card. */
+.float-card small,.float-card b{display:block}
+/* Estilos de float-card. */
+.float-card small{color:#8190a4;font-size:9px}
+/* Estilos de float-card. */
+.float-card b{font-size:11px;color:var(--ink)}
+/* Estilos de float-icon. */
+.float-icon{width:34px;height:34px;display:grid;place-items:center;border-radius:10px;background:#eaf1ff;color:var(--blue);font-weight:900;font-size:17px}
+/* Estilos de stock-icon. */
+.stock-icon{color:#149587;background:#e6f7f4}
+/* Estilos de float-sales. */
+.float-sales{top:57px;right:2px}
+/* Estilos de float-stock. */
+.float-stock{bottom:42px;left:2px}
+/* Estilos de art-spark. */
+.art-spark{position:absolute;color:#73a3f6;font-size:25px}
+/* Estilos de spark-one. */
+.spark-one{left:11%;top:50px}
+/* Estilos de spark-two. */
+.spark-two{right:9%;bottom:68px;color:#80c9be}
+/* Estilos de intro-strip. */
+.intro-strip{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+/* Estilos de intro-strip-inner. */
+.intro-strip-inner{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:72px;color:#64748b;font-size:13px}
+/* Estilos de intro-strip-inner. */
+.intro-strip-inner div{display:flex;align-items:center;gap:13px;color:#344967}
+/* Estilos de intro-strip-inner. */
+.intro-strip-inner i{color:#92a5c0;font-style:normal}
+/* Estilos de section-space. */
+.section-space{padding:90px 0}
+/* Estilos de section-heading. */
+.section-heading{max-width:720px;margin-bottom:30px}
+/* Estilos de section-heading, text-center. */
+.section-heading.text-center{max-width:740px}
+/* Estilos de section-heading, erp-feature-section, final-cta. */
+.section-heading h2,.erp-feature-section h2,.final-cta h2{font-size:clamp(2rem,3.8vw,3.05rem);line-height:1.13;letter-spacing:-.055em;font-weight:780;margin:13px 0}
+/* Estilos de section-heading. */
+.section-heading p{color:var(--muted);max-width:680px;margin-bottom:0;font-size:16px}
+/* Estilos de section-heading, text-center. */
+.section-heading.text-center p{margin-inline:auto}
+/* Estilos de benefit-card. */
+.benefit-card{height:100%;padding:27px 25px;border:1px solid var(--line);border-radius:16px;background:white;transition:transform .2s,box-shadow .2s}
+/* Estilos de benefit-card, solution-card. */
+.benefit-card:hover,.solution-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+/* Estilos de feature-icon, solution-icon. */
+.feature-icon,.solution-icon{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:#eaf1ff;color:var(--blue);font-size:23px;font-weight:700;margin-bottom:19px}
+/* Estilos de icon-violet, solution-icon, violet. */
+.icon-violet,.solution-icon.violet{background:#f0ecff;color:var(--violet)}
+/* Estilos de icon-teal, solution-icon, teal. */
+.icon-teal,.solution-icon.teal{background:#e6f7f4;color:#15958a}
+/* Estilos de benefit-card, solution-card, included-card. */
+.benefit-card h3,.solution-card h3,.included-card h3,.process-card h3,.term-card h3{font-size:18px;letter-spacing:-.025em;font-weight:750;margin-bottom:9px}
+/* Estilos de benefit-card, solution-card, included-card. */
+.benefit-card p,.solution-card p,.included-card p,.process-card p,.term-card p{font-size:14px;color:var(--muted);margin-bottom:0}
+/* Estilos de solutions-section, compare-section, faq-section. */
+.solutions-section,.compare-section,.faq-section{background:var(--pale)}
+/* Estilos de solution-card. */
+.solution-card{position:relative;height:100%;min-height:260px;padding:27px;border:1px solid var(--line);border-radius:18px;background:#fff;overflow:hidden;transition:transform .2s,box-shadow .2s}
+/* Estilos de solution-card-featured. */
+.solution-card-featured{border-color:#d2def5;background:linear-gradient(150deg,#fff,#f5f8ff)}
+/* Estilos de solution-number. */
+.solution-number{position:absolute;right:22px;top:17px;font-size:12px;font-weight:800;color:#a9b8cc}
+/* Estilos de solution-icon. */
+.solution-icon{width:50px;height:50px;background:#eaf1ff;border-radius:15px}
+/* Estilos de solution-card. */
+.solution-card h3{font-size:20px}
+/* Estilos de solution-card. */
+.solution-card p{min-height:48px}
+/* Estilos de text-link. */
+.text-link{display:inline-flex;align-items:center;gap:8px;margin-top:18px;text-decoration:none;font-size:13px;font-weight:750;color:var(--blue)}
+/* Estilos de text-link. */
+.text-link:hover{text-decoration:underline}
+/* Estilos de plans-section. */
+.plans-section{background:#fff}
+/* Estilos de billing-control. */
+.billing-control{display:flex;width:max-content;max-width:100%;padding:5px;border:1px solid #dde6f2;background:#f5f8fc;border-radius:13px;margin:30px auto 10px}
+/* Estilos de billing-option. */
+.billing-option{min-height:44px;border:0;background:transparent;color:#55667e;padding:9px 17px;border-radius:9px;font-weight:750;font-size:14px}
+/* Estilos de billing-option, is-active. */
+.billing-option.is-active{background:#fff;color:var(--ink);box-shadow:0 3px 12px #203c601a}
+/* Estilos de discount-badge. */
+.discount-badge{background:#dff5ed;color:#147b59;font-size:10px;border-radius:20px;padding:4px 7px;margin-left:4px}
+/* Estilos de billing-note. */
+.billing-note{text-align:center;color:var(--muted);font-size:13px;min-height:26px;margin-bottom:45px}
+/* Estilos de plan-category. */
+.plan-category{margin-top:44px}
+/* Estilos de category-heading. */
+.category-heading{display:flex;align-items:center;gap:15px;margin-bottom:20px}
+/* Estilos de category-index. */
+.category-index{width:42px;height:42px;display:grid;place-items:center;border-radius:13px;background:#eaf1ff;color:var(--blue);font-size:13px;font-weight:850}
+/* Estilos de category-violet. */
+.category-violet{background:#f0ecff;color:var(--violet)}
+/* Estilos de category-teal. */
+.category-teal{background:#e6f7f4;color:#168f84}
+/* Estilos de category-heading. */
+.category-heading h3{font-size:21px;font-weight:780;letter-spacing:-.03em;margin-bottom:2px}
+/* Estilos de category-heading. */
+.category-heading p{font-size:13px;color:var(--muted);margin-bottom:0}
+/* Estilos de erp-context. */
+.erp-context{background:#eef8f7;border:1px solid #d3eeea;padding:14px 17px;border-radius:12px;margin:-2px 0 20px;display:flex;flex-direction:column;gap:2px}
+/* Estilos de erp-context. */
+.erp-context strong{font-size:13px;color:#147b72}
+/* Estilos de erp-context. */
+.erp-context span{font-size:12px;color:#57716f}
+/* Estilos de plan-col. */
+.plan-col{display:flex}
+/* Estilos de plan-card. */
+.plan-card{width:100%;height:100%;position:relative;background:#fff;border:1px solid var(--line);border-radius:17px;padding:23px 21px 20px;display:flex;flex-direction:column;box-shadow:0 7px 22px rgba(26,52,84,.035)}
+/* Estilos de plan-card, recommended. */
+.plan-card.recommended{border:2px solid var(--blue);box-shadow:0 16px 35px rgba(40,100,220,.12)}
+/* Estilos de plan-ribbon. */
+.plan-ribbon{position:absolute;top:-13px;right:17px;background:var(--blue);color:#fff;border-radius:20px;padding:5px 11px;font-size:9px;text-transform:uppercase;letter-spacing:.08em;font-weight:850}
+/* Estilos de plan-type. */
+.plan-type{color:#74839a;font-size:10px;letter-spacing:.12em;font-weight:850;text-transform:uppercase}
+/* Estilos de plan-card. */
+.plan-card h4{font-size:19px;line-height:1.2;letter-spacing:-.03em;font-weight:800;margin:8px 0}
+/* Estilos de plan-description. */
+.plan-description{min-height:61px;font-size:12px;color:var(--muted);line-height:1.55;margin-bottom:13px}
+/* Estilos de plan-limits. */
+.plan-limits{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:13px}
+/* Estilos de limit-chip. */
+.limit-chip{border-radius:7px;padding:5px 7px;background:#f2f6fb;color:#43556e;font-size:10px;font-weight:700}
+/* Estilos de price-old. */
+.price-old{font-size:12px;color:#8a98aa;line-height:1.2;margin-bottom:3px}
+/* Estilos de price-old. */
+.price-old del{ text-decoration-thickness:1px}
+/* Estilos de price-area. */
+.price-area{padding:14px 0 12px;border-top:1px solid #edf1f6;border-bottom:1px solid #edf1f6}
+/* Estilos de price-main. */
+.price-main{display:flex;align-items:baseline;gap:3px;white-space:nowrap}
+/* Estilos de price-currency. */
+.price-currency{font-weight:700;font-size:12px}
+/* Estilos de price-value. */
+.price-value{font-size:29px;line-height:1.1;font-weight:820;letter-spacing:-.06em}
+/* Estilos de price-period. */
+.price-period{font-size:11px;color:#718199}
+/* Estilos de annual-equivalent. */
+.annual-equivalent{font-size:11px;color:#64748b;margin-top:4px}
+/* Estilos de annual-total. */
+.annual-total{font-size:11px;color:#334c6d;font-weight:700;margin-top:4px}
+/* Estilos de annual-saving. */
+.annual-saving{font-size:11px;color:#13805f;font-weight:750;margin-top:2px}
+/* Estilos de plan-features. */
+.plan-features{list-style:none;padding:0;margin:14px 0 17px;flex:1}
+/* Estilos de plan-features. */
+.plan-features li{position:relative;padding:5px 0 5px 18px;color:#52647d;font-size:11px;line-height:1.45}
+/* Estilos de plan-features. */
+.plan-features li:before{content:"✓";position:absolute;left:0;top:5px;color:var(--teal);font-weight:900}
+/* Estilos de plan-features, muted-feature. */
+.plan-features li.muted-feature:before{content:"•";color:#99a8bb}
+/* Estilos de plan-cta. */
+.plan-cta{width:100%;font-size:12px;padding:10px}
+/* Estilos de plan-card, recommended, plan-cta. */
+.plan-card.recommended .plan-cta{background:var(--blue);border-color:var(--blue);color:white}
+/* Estilos de plan-footnote. */
+.plan-footnote{display:flex;gap:11px;align-items:flex-start;margin-top:29px;padding:14px 17px;border:1px solid #e7edf5;background:#fafcff;border-radius:12px;color:#64748b}
+/* Estilos de plan-footnote. */
+.plan-footnote span{color:var(--blue);font-size:18px}
+/* Estilos de plan-footnote. */
+.plan-footnote p{margin:0;font-size:12px}
+/* Estilos de table-wrap. */
+.table-wrap{overflow:auto;border:1px solid #dfe7f1;border-radius:14px;background:#fff;box-shadow:0 8px 24px rgba(27,54,88,.04)}
+/* Estilos de comparison-table. */
+.comparison-table{min-width:1500px;margin:0;font-size:11px}
+/* Estilos de comparison-table, comparison-table. */
+.comparison-table th,.comparison-table td{padding:12px 11px;border-color:#edf1f6;white-space:nowrap}
+/* Estilos de comparison-table. */
+.comparison-table thead th{background:#eff4fb;color:#435671;font-size:10px;text-transform:uppercase;letter-spacing:.04em}
+/* Estilos de comparison-table. */
+.comparison-table tbody th{font-weight:750;color:#253a56}
+/* Estilos de comparison-table. */
+.comparison-table tbody tr:hover>*{background:#f8faff}
+/* Estilos de table-legal, small-note, erp-disclaimer. */
+.table-legal,.small-note,.erp-disclaimer{font-size:11px;color:#78879b;margin:13px 0 0}
+/* Estilos de included-section. */
+.included-section{background:#fff}
+/* Estilos de included-card. */
+.included-card{height:100%;padding:25px;border:1px solid var(--line);border-radius:17px;background:#fff}
+/* Estilos de included-icon. */
+.included-icon{display:grid;place-items:center;width:40px;height:40px;border-radius:12px;background:#eaf1ff;color:var(--blue);font-size:12px;font-weight:900;margin-bottom:18px}
+/* Estilos de included-highlight. */
+.included-highlight{margin-top:18px;padding-top:13px;border-top:1px solid #edf1f6;color:#365374;font-size:12px;font-weight:750}
+/* Estilos de erp-feature-section. */
+.erp-feature-section{background:#142c4e;color:#fff;position:relative;overflow:hidden}
+/* Estilos de erp-feature-section. */
+.erp-feature-section:before{content:"";position:absolute;width:450px;height:450px;border:1px solid #ffffff12;border-radius:50%;right:-80px;top:-190px;box-shadow:0 0 0 45px #ffffff08,0 0 0 95px #ffffff05}
+/* Estilos de erp-feature-grid. */
+.erp-feature-grid{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+/* Estilos de eyebrow-light. */
+.eyebrow-light{color:#9dbdff}
+/* Estilos de erp-feature-section. */
+.erp-feature-section h2{color:#fff;max-width:570px}
+/* Estilos de erp-feature-section, final-cta. */
+.erp-feature-section h2 span,.final-cta h2 span{color:#9dbdff}
+/* Estilos de erp-feature-section. */
+.erp-feature-section p{max-width:590px;color:#c5d1e1;font-size:14px}
+/* Estilos de check-list. */
+.check-list{list-style:none;padding:0;margin:20px 0;color:#e5edf8;font-size:13px}
+/* Estilos de check-list. */
+.check-list li{padding:6px 0}
+/* Estilos de check-list. */
+.check-list li:before{content:"✓";color:#76d2c4;font-weight:900;margin-right:10px}
+/* Estilos de erp-visual. */
+.erp-visual{min-height:310px;position:relative;display:grid;place-items:center}
+/* Estilos de erp-window. */
+.erp-window{width:min(420px,100%);height:245px;border:1px solid #ffffff36;border-radius:15px;background:#f8fbff;overflow:hidden;box-shadow:0 25px 55px #071a34a3;transform:rotate(2deg)}
+/* Estilos de erp-window-head. */
+.erp-window-head{height:38px;display:flex;align-items:center;gap:5px;padding:0 13px;background:#edf2fa;border-bottom:1px solid #dce5f1}
+/* Estilos de erp-window-head. */
+.erp-window-head i{width:7px;height:7px;border-radius:50%;background:#c1ccdc}
+/* Estilos de erp-window-head. */
+.erp-window-head span{font-size:9px;color:#61738c;margin-left:8px;font-weight:700}
+/* Estilos de erp-window-body. */
+.erp-window-body{height:207px;display:flex}
+/* Estilos de erp-side. */
+.erp-side{width:55px;background:#1d3d69}
+/* Estilos de erp-content. */
+.erp-content{padding:18px;flex:1}
+/* Estilos de erp-stat. */
+.erp-stat{display:flex;justify-content:space-between;align-items:center;color:#718199;font-size:9px}
+/* Estilos de erp-stat. */
+.erp-stat b{font-size:11px;color:#263e5d}
+/* Estilos de erp-stat. */
+.erp-stat b span{color:#24a18f}
+/* Estilos de erp-bars. */
+.erp-bars{display:flex;align-items:end;gap:7px;height:100px;margin-top:11px;border-bottom:1px solid #e2e9f2}
+/* Estilos de erp-bars. */
+.erp-bars i{width:8%;height:50%;border-radius:4px 4px 0 0;background:#99b9ed}
+/* Estilos de erp-bars. */
+.erp-bars i:nth-child(2n){height:72%;background:#729ce1}
+/* Estilos de erp-bars. */
+.erp-bars i:nth-child(3n){height:92%;background:#27b5a0}
+/* Estilos de erp-line. */
+.erp-line{height:6px;width:70%;background:#e7edf6;border-radius:5px;margin-top:14px}
+/* Estilos de erp-float. */
+.erp-float{position:absolute;right:0;bottom:27px;background:#fff;color:#176d65;border-radius:12px;padding:12px 15px;box-shadow:var(--shadow);font-weight:850}
+/* Estilos de erp-float. */
+.erp-float span{font-size:11px;color:#344b67;margin-left:7px}
+/* Estilos de erp-disclaimer. */
+.erp-disclaimer{position:relative;color:#aabbd0;margin-top:23px}
+/* Estilos de process-row. */
+.process-row{position:relative}
+/* Estilos de process-card. */
+.process-card{height:100%;padding:22px;border:1px solid var(--line);border-radius:15px;background:#fff}
+/* Estilos de process-card. */
+.process-card>span{display:grid;place-items:center;width:35px;height:35px;background:#eaf1ff;color:var(--blue);border-radius:11px;font-weight:850;font-size:13px;margin-bottom:19px}
+/* Estilos de process-card. */
+.process-card h3{font-size:16px}
+/* Estilos de process-card. */
+.process-card p{font-size:12px}
+/* Estilos de terms-section. */
+.terms-section{background:#f7f9fc}
+/* Estilos de term-card. */
+.term-card{height:100%;padding:23px;background:#fff;border:1px solid var(--line);border-radius:15px}
+/* Estilos de term-card. */
+.term-card h3{font-size:16px;margin-bottom:13px}
+/* Estilos de term-card. */
+.term-card ul{padding-left:18px;margin-bottom:0;color:#61728a;font-size:12px}
+/* Estilos de term-card. */
+.term-card li{padding:3px 0}
+/* Estilos de contract-note. */
+.contract-note{display:grid;grid-template-columns:auto 1fr;align-items:center;gap:4px 17px;background:#eef3fa;border-radius:13px;padding:18px 21px;margin-top:25px}
+/* Estilos de contract-note. */
+.contract-note strong{font-size:13px}
+/* Estilos de contract-note. */
+.contract-note span{font-size:12px;color:#677991}
+/* Estilos de contract-note. */
+.contract-note div{grid-column:2;display:flex;gap:18px;flex-wrap:wrap}
+/* Estilos de contract-note. */
+.contract-note a{font-size:12px;font-weight:750;text-decoration:none}
+/* Estilos de contract-note. */
+.contract-note a:hover{text-decoration:underline}
+/* Estilos de faq-grid. */
+.faq-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:70px}
+/* Estilos de faq-accordion, accordion-item. */
+.faq-accordion .accordion-item{border:1px solid #e2e9f2!important;border-radius:12px!important;overflow:hidden;margin-bottom:10px;background:white}
+/* Estilos de faq-accordion, accordion-button. */
+.faq-accordion .accordion-button{font-size:13px;font-weight:750;color:var(--ink);padding:16px 18px;background:#fff;box-shadow:none}
+/* Estilos de faq-accordion, accordion-button, collapsed. */
+.faq-accordion .accordion-button:not(.collapsed){color:var(--blue)}
+/* Estilos de faq-accordion, accordion-button. */
+.faq-accordion .accordion-button:after{width:14px;height:14px;background-size:14px}
+/* Estilos de faq-accordion, accordion-body. */
+.faq-accordion .accordion-body{padding:0 18px 17px;color:#61728a;font-size:12px}
+/* Estilos de final-cta-section. */
+.final-cta-section{padding:65px 0;background:linear-gradient(120deg,#1e4c9a,#2768d2 60%,#397bdf);color:white;position:relative;overflow:hidden}
+/* Estilos de final-cta-section. */
+.final-cta-section:after{content:"";position:absolute;width:370px;height:370px;border:1px solid #ffffff22;border-radius:50%;right:-90px;top:-160px;box-shadow:0 0 0 45px #ffffff0b,0 0 0 90px #ffffff08}
+/* Estilos de final-cta. */
+.final-cta{position:relative;z-index:1;display:flex;justify-content:space-between;align-items:center;gap:45px}
+/* Estilos de final-cta. */
+.final-cta h2{max-width:640px;color:#fff}
+/* Estilos de final-cta. */
+.final-cta h2 span{color:#c2d8ff}
+/* Estilos de final-cta. */
+.final-cta p{max-width:650px;color:#e0eaff;font-size:14px;margin:0}
+/* Estilos de final-cta-actions. */
+.final-cta-actions{display:flex;flex-direction:column;gap:10px;min-width:220px}
+/* Estilos de final-cta-actions, btn-outline-light. */
+.final-cta-actions .btn-outline-light:hover{color:#1d55aa}
+/* Estilos de site-footer. */
+.site-footer{padding:45px 0 24px;background:#fff}
+/* Estilos de footer-main. */
+.footer-main{display:grid;grid-template-columns:1.3fr .7fr 1fr;gap:50px;padding-bottom:36px}
+/* Estilos de footer-brand. */
+.footer-brand p{max-width:270px;margin:12px 0;color:#718199;font-size:12px}
+/* Estilos de footer-links. */
+.footer-links{display:flex;flex-direction:column;align-items:flex-start;gap:8px}
+/* Estilos de footer-links. */
+.footer-links h2{font-size:12px;text-transform:uppercase;letter-spacing:.09em;color:#8593a6;font-weight:850;margin:0 0 5px}
+/* Estilos de footer-links. */
+.footer-links a{font-size:12px;color:#435671;text-decoration:none}
+/* Estilos de footer-links. */
+.footer-links a:hover{text-decoration:underline;color:var(--blue)}
+/* Estilos de footer-bottom. */
+.footer-bottom{border-top:1px solid var(--line);padding-top:17px;display:flex;justify-content:space-between;color:#8a98aa;font-size:10px}
+/* Estilos de meta-note. */
+.meta-note{font-size:10px;color:#98a4b4;margin:12px 0 0;text-align:center}
+/* Ajustes responsivos para (min-width:1200px). */
+@media(min-width:1200px){
+/* Estilos de plan-card. */
+.plan-card{padding-inline:23px}
+/* Estilos de plans-section, col-lg-4. */
+.plans-section .col-lg-4{width:33.333%}}
+/* Ajustes responsivos para (prefers-reduced-motion:reduce). */
+@media(prefers-reduced-motion:reduce){
+/* Estilos de html. */
+html{scroll-behavior:auto}
+/* Estilos de *,*::before,*::after. */
+*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+/* Estilos de table-wrap. */
+/* Mantém a identificação do plano visível enquanto as colunas de recursos deslizam. */
+.table-wrap{overscroll-behavior-inline:contain;scrollbar-color:#9eb5d8 #edf2f8;scrollbar-width:thin}
+/* Estilos de comparison-table, comparison-table. */
+.comparison-table thead th:first-child,.comparison-table tbody th:first-child{position:sticky;left:0;width:195px;min-width:195px;max-width:195px;white-space:normal;z-index:2;box-shadow:5px 0 9px -8px rgba(19,43,75,.45)}
+/* Estilos de comparison-table. */
+.comparison-table thead th:first-child{z-index:4;background:#eff4fb}
+/* Estilos de comparison-table. */
+.comparison-table tbody th:first-child{background:#fff}
+/* Estilos de comparison-table. */
+.comparison-table tbody tr:hover th:first-child{background:#f8faff}
+/* Estilos de comparison-table. */
+/* Comparison table: sticky plan label and readable integration details. */
+.comparison-table{min-width:1280px}
+/* Estilos de comparison-table, comparison-table. */
+.comparison-table th:nth-child(5),.comparison-table td:nth-child(5){min-width:225px;max-width:255px;white-space:normal}
+/* Estilos de comparison-table, comparison-table. */
+.comparison-table th:nth-child(7),.comparison-table td:nth-child(7){min-width:330px;max-width:370px;white-space:normal;line-height:1.5}
+/* Estilos de integration-notes. */
+.integration-notes{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px}
+/* Estilos de integration-notes. */
+.integration-notes article{height:100%;padding:20px 22px;background:#fff;border:1px solid var(--line);border-radius:14px}
+/* Estilos de integration-notes. */
+.integration-notes h3{font-size:15px;font-weight:800;margin-bottom:8px}
+/* Estilos de integration-notes. */
+.integration-notes p{font-size:12px;line-height:1.65;color:var(--muted);margin:0}
+/* Estilos de footer-cookie-link. */
+.footer-cookie-link{border:0;background:none;padding:0;text-align:left;color:#435671;font-size:12px;text-decoration:underline;text-underline-offset:2px;min-height:32px}
+/* Estilos de cookie-banner, footer-cookie-link. */
+.cookie-banner[hidden],.footer-cookie-link[hidden]{display:none!important}
+/* Estilos de cookie-banner. */
+.cookie-banner{position:fixed;z-index:1100;left:50%;bottom:16px;transform:translateX(-50%);width:min(1060px,calc(100% - 28px));display:flex;align-items:center;justify-content:space-between;gap:24px;padding:18px 20px;border:1px solid #dce6f2;border-radius:16px;background:#fff;box-shadow:0 18px 60px rgba(17,38,69,.22)}
+/* Estilos de cookie-copy. */
+.cookie-copy{max-width:620px}
+/* Estilos de cookie-copy. */
+.cookie-copy strong{display:block;font-size:14px;margin-bottom:3px}
+/* Estilos de cookie-copy. */
+.cookie-copy p{font-size:12px;line-height:1.5;color:#61728a;margin:0}
+/* Estilos de cookie-copy. */
+.cookie-copy a{font-weight:700}
+/* Estilos de cookie-actions. */
+.cookie-actions{display:flex;align-items:center;justify-content:flex-end;gap:9px;flex-wrap:wrap}
+/* Estilos de cookie-actions, btn. */
+.cookie-actions .btn{font-size:11px;padding:8px 12px;min-height:42px}
+/* Estilos de navbar-collapse. */
+/* Mobile-first base layout. Wider layouts are progressively enhanced below. */
+.navbar-collapse{padding:14px 0 18px}
+/* Estilos de navbar-nav, btn. */
+.navbar-nav .btn{width:max-content}
+/* Estilos de orbit-one. */
+.orbit-one{width:300px;height:190px}
+/* Estilos de orbit-two. */
+.orbit-two{width:265px;height:265px}
+/* Estilos de faq-grid. */
+.faq-grid{grid-template-columns:1fr;gap:25px}
+/* Estilos de final-cta-actions. */
+.final-cta-actions{width:100%;min-width:0}
+/* Estilos de navbar. */
+.navbar{min-height:68px}
+/* Estilos de navbar-brand. */
+.navbar-brand{font-size:14px}
+/* Estilos de navbar-brand. */
+.navbar-brand img{width:44px;height:44px}
+/* Estilos de hero-section. */
+.hero-section{padding:42px 0}
+/* Estilos de hero-grid. */
+.hero-grid{grid-template-columns:1fr;gap:5px;min-height:0}
+/* Estilos de hero-copy. */
+.hero-copy{max-width:100%}
+/* Estilos de hero-copy. */
+.hero-copy h1{font-size:clamp(2.45rem,7.4vw,3.1rem);max-width:580px}
+/* Estilos de hero-lead. */
+.hero-lead{font-size:16px}
+/* Estilos de hero-assurances. */
+.hero-assurances{flex-direction:column;gap:8px;margin-top:20px}
+/* Estilos de hero-art. */
+.hero-art{height:300px;margin-top:0}
+/* Estilos de dashboard-card. */
+.dashboard-card{width:min(315px,82%);padding:15px}
+/* Estilos de dash-banner. */
+.dash-banner{height:125px}
+/* Estilos de float-card. */
+.float-card{padding:9px 10px}
+/* Estilos de float-sales. */
+.float-sales{top:18px;right:4%}
+/* Estilos de float-stock. */
+.float-stock{left:4%;bottom:8px}
+/* Estilos de intro-strip-inner. */
+.intro-strip-inner{flex-direction:column;align-items:flex-start;justify-content:center;padding:14px 0;gap:5px;font-size:12px}
+/* Estilos de intro-strip-inner. */
+.intro-strip-inner div{gap:8px}
+/* Estilos de section-space. */
+.section-space{padding:62px 0}
+/* Estilos de section-heading. */
+.section-heading{margin-bottom:23px}
+/* Estilos de section-heading, erp-feature-section, final-cta. */
+.section-heading h2,.erp-feature-section h2,.final-cta h2{font-size:2.15rem}
+/* Estilos de benefit-card, solution-card. */
+.benefit-card,.solution-card{padding:22px}
+/* Estilos de solution-card. */
+.solution-card{min-height:0}
+/* Estilos de solution-card. */
+.solution-card p{min-height:0}
+/* Estilos de billing-control. */
+.billing-control{width:100%;justify-content:center}
+/* Estilos de billing-option. */
+.billing-option{padding:8px 12px;font-size:12px}
+/* Estilos de billing-note. */
+.billing-note{font-size:11px;min-height:38px;margin-bottom:30px}
+/* Estilos de plan-col. */
+.plan-col{width:100%}
+/* Estilos de plan-card. */
+.plan-card{padding:23px}
+/* Estilos de plan-description. */
+.plan-description{min-height:0;font-size:13px}
+/* Estilos de plan-features. */
+.plan-features li{font-size:12px}
+/* Estilos de price-value. */
+.price-value{font-size:32px}
+/* Estilos de category-heading. */
+.category-heading h3{font-size:19px}
+/* Estilos de table-wrap. */
+.table-wrap{margin-inline:-3px}
+/* Estilos de comparison-table. */
+.comparison-table{min-width:1240px}
+/* Estilos de comparison-table, comparison-table. */
+.comparison-table thead th:first-child,.comparison-table tbody th:first-child{width:155px;min-width:155px;max-width:155px}
+/* Estilos de included-card. */
+.included-card{padding:22px}
+/* Estilos de erp-feature-grid. */
+.erp-feature-grid{grid-template-columns:1fr;gap:24px}
+/* Estilos de erp-visual. */
+.erp-visual{min-height:240px}
+/* Estilos de erp-window. */
+.erp-window{height:215px}
+/* Estilos de erp-window-body. */
+.erp-window-body{height:177px}
+/* Estilos de erp-float. */
+.erp-float{right:0;bottom:10px}
+/* Estilos de integration-notes. */
+.integration-notes{grid-template-columns:1fr}
+/* Estilos de process-card. */
+.process-card{padding:20px}
+/* Estilos de contract-note. */
+.contract-note{grid-template-columns:1fr;gap:5px}
+/* Estilos de contract-note. */
+.contract-note div{grid-column:1;margin-top:8px;gap:10px 16px}
+/* Estilos de final-cta. */
+.final-cta{flex-direction:column;align-items:stretch;gap:25px}
+/* Estilos de final-cta-actions. */
+.final-cta-actions{flex-direction:column;align-items:stretch}
+/* Estilos de footer-main. */
+.footer-main{grid-template-columns:1fr 1fr;gap:25px 16px}
+/* Estilos de footer-brand. */
+.footer-brand{grid-column:1/-1}
+/* Estilos de footer-links. */
+.footer-links:last-child{grid-column:1/-1}
+/* Estilos de footer-bottom. */
+.footer-bottom{gap:8px;flex-direction:column}
+/* Estilos de meta-note. */
+.meta-note{text-align:left}
+/* Estilos de cookie-banner. */
+.cookie-banner{align-items:stretch;flex-direction:column;gap:12px;padding:16px}
+/* Estilos de cookie-actions. */
+.cookie-actions{justify-content:stretch;flex-direction:column}
+/* Estilos de cookie-actions, btn. */
+.cookie-actions .btn{width:100%}
+/* Estilos de cookie-banner, footer-cookie-link. */
+.cookie-banner[hidden],.footer-cookie-link[hidden]{display:none!important}
+/* Ajustes responsivos para (min-width:576px). */
+@media(min-width:576px){
+/* Estilos de navbar. */
+.navbar{min-height:76px}
+/* Estilos de navbar-brand. */
+.navbar-brand{font-size:16px}
+/* Estilos de navbar-brand. */
+.navbar-brand img{width:52px;height:52px}
+/* Estilos de hero-copy. */
+.hero-copy h1{font-size:clamp(2.7rem,5.4vw,3.5rem)}
+/* Estilos de hero-art. */
+.hero-art{height:340px}
+/* Estilos de orbit-one. */
+.orbit-one{width:350px;height:220px}
+/* Estilos de orbit-two. */
+.orbit-two{width:300px;height:300px}
+/* Estilos de dashboard-card. */
+.dashboard-card{width:min(340px,78%)}
+/* Estilos de dash-banner. */
+.dash-banner{height:142px}
+/* Estilos de section-space. */
+.section-space{padding:72px 0}
+/* Estilos de section-heading, erp-feature-section, final-cta. */
+.section-heading h2,.erp-feature-section h2,.final-cta h2{font-size:clamp(2rem,3.8vw,3.05rem)}
+/* Estilos de contract-note. */
+.contract-note{grid-template-columns:auto 1fr;gap:4px 17px}
+/* Estilos de contract-note. */
+.contract-note div{grid-column:2;margin-top:0;gap:18px}
+}
+/* Ajustes responsivos para (min-width:768px). */
+@media(min-width:768px){
+/* Estilos de hero-section. */
+.hero-section{padding:50px 0 58px}
+/* Estilos de hero-grid. */
+.hero-grid{grid-template-columns:1fr 1fr;gap:15px}
+/* Estilos de hero-art. */
+.hero-art{height:360px}
+/* Estilos de hero-assurances. */
+.hero-assurances{flex-direction:row;gap:20px;margin-top:27px}
+/* Estilos de intro-strip-inner. */
+.intro-strip-inner{flex-direction:row;align-items:center;justify-content:space-between;padding:0;min-height:72px;font-size:13px}
+/* Estilos de intro-strip-inner. */
+.intro-strip-inner div{gap:13px}
+/* Estilos de plan-col. */
+.plan-col{width:50%}
+/* Estilos de faq-grid. */
+.faq-grid{grid-template-columns:.75fr 1.25fr;gap:35px}
+/* Estilos de integration-notes. */
+.integration-notes{grid-template-columns:1fr 1fr}
+/* Estilos de final-cta. */
+.final-cta{flex-direction:row;align-items:flex-start;gap:45px}
+/* Estilos de final-cta-actions. */
+.final-cta-actions{flex-direction:row;flex-wrap:wrap;width:100%}
+/* Estilos de footer-main. */
+.footer-main{grid-template-columns:1.3fr .7fr 1fr;gap:25px}
+/* Estilos de footer-brand, footer-links. */
+.footer-brand,.footer-links:last-child{grid-column:auto}
+/* Estilos de footer-bottom. */
+.footer-bottom{flex-direction:row;gap:8px}
+/* Estilos de meta-note. */
+.meta-note{text-align:center}
+/* Estilos de cookie-banner. */
+.cookie-banner{align-items:center;flex-direction:row;gap:24px;padding:18px 20px}
+/* Estilos de cookie-actions. */
+.cookie-actions{justify-content:flex-end;flex-direction:row}
+/* Estilos de cookie-actions, btn. */
+.cookie-actions .btn{width:auto}
+}
+/* Ajustes responsivos para (min-width:992px). */
+@media(min-width:992px){
+/* Estilos de hero-section. */
+.hero-section{padding:66px 0 74px}
+/* Estilos de hero-grid. */
+.hero-grid{grid-template-columns:1.03fr .97fr;gap:36px;min-height:450px}
+/* Estilos de hero-copy. */
+.hero-copy h1{font-size:clamp(2.55rem,5vw,4.35rem)}
+/* Estilos de hero-lead. */
+.hero-lead{font-size:18px}
+/* Estilos de hero-art. */
+.hero-art{height:420px}
+/* Estilos de orbit-one. */
+.orbit-one{width:440px;height:280px}
+/* Estilos de orbit-two. */
+.orbit-two{width:365px;height:365px}
+/* Estilos de navbar-collapse. */
+.navbar-collapse{padding:0}
+/* Estilos de section-space. */
+.section-space{padding:90px 0}
+/* Estilos de section-heading. */
+.section-heading{margin-bottom:30px}
+/* Estilos de plan-col. */
+.plan-col{width:33.333333%}
+/* Estilos de erp-feature-grid. */
+.erp-feature-grid{grid-template-columns:1fr 1fr;gap:60px}
+/* Estilos de erp-visual. */
+.erp-visual{min-height:310px}
+/* Estilos de erp-window. */
+.erp-window{height:245px}
+/* Estilos de erp-window-body. */
+.erp-window-body{height:207px}
+/* Estilos de faq-grid. */
+.faq-grid{grid-template-columns:.75fr 1.25fr;gap:70px}
+/* Estilos de final-cta. */
+.final-cta{align-items:center}
+/* Estilos de final-cta-actions. */
+.final-cta-actions{flex-direction:column;flex-wrap:nowrap;width:auto;min-width:220px}
+}
+/* Ajustes responsivos para (min-width:1200px). */
+@media(min-width:1200px){
+/* Estilos de plan-card. */
+.plan-card{padding-inline:23px}}
+

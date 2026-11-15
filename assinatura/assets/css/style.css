@@ -1,0 +1,549 @@
+
+/* Estilos de :root. */
+/* Documentação: estilos da página, organizados por componente e comportamento responsivo. */
+:root {
+  --gp-blue: #1457d9;
+  --gp-blue-dark: #0d347f;
+  --gp-ink: #17243b;
+  --gp-muted: #63718a;
+  --gp-soft: #f4f7fc;
+  --gp-line: #e3eaf5;
+  --gp-green: #16845b;
+}
+/* Estilos de html. */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
+}
+/* Estilos de body. */
+body {
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+  color: var(--gp-ink);
+  line-height: 1.65;
+}
+/* Estilos de a. */
+a {
+  text-underline-offset: 3px;
+}
+/* Estilos de navbar. */
+.navbar {
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--gp-line);
+}
+/* Estilos de brand-mark. */
+.brand-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 13px;
+  background: var(--gp-blue);
+  color: #fff;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+/* Estilos de brand-name. */
+.brand-name {
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--gp-ink);
+}
+/* Estilos de btn-primary. */
+.btn-primary {
+  --bs-btn-bg: var(--gp-blue);
+  --bs-btn-border-color: var(--gp-blue);
+  --bs-btn-hover-bg: var(--gp-blue-dark);
+  --bs-btn-hover-border-color: var(--gp-blue-dark);
+  font-weight: 700;
+}
+/* Estilos de btn-outline-primary. */
+.btn-outline-primary {
+  --bs-btn-color: var(--gp-blue);
+  --bs-btn-border-color: #b7cafa;
+  --bs-btn-hover-bg: var(--gp-blue);
+  --bs-btn-hover-border-color: var(--gp-blue);
+  font-weight: 700;
+}
+/* Estilos de hero. */
+.hero {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 88% 18%, #dce8ff 0, transparent 30%),
+    linear-gradient(135deg, #f8faff 0%, #eef4ff 100%);
+  padding: 6.5rem 0 5.5rem;
+}
+/* Estilos de eyebrow. */
+.eyebrow {
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0.4rem 0.75rem;
+  border: 1px solid #cbd9fb;
+  border-radius: 99px;
+  background: #fff;
+  color: var(--gp-blue-dark);
+  font-size: 0.82rem;
+  font-weight: 750;
+}
+/* Estilos de hero. */
+.hero h1 {
+  font-size: clamp(2.4rem, 5vw, 4.25rem);
+  line-height: 1.08;
+  letter-spacing: -0.055em;
+  font-weight: 850;
+  max-width: 780px;
+}
+/* Estilos de hero-copy. */
+.hero-copy {
+  max-width: 690px;
+  color: #52627d;
+  font-size: 1.13rem;
+}
+/* Estilos de hero-panel. */
+.hero-panel {
+  background: #fff;
+  border: 1px solid #e0e8f7;
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 22px 60px rgba(28, 65, 130, 0.1);
+}
+/* Estilos de mini-stat. */
+.mini-stat {
+  display: flex;
+  gap: 0.8rem;
+  align-items: flex-start;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--gp-line);
+}
+/* Estilos de mini-stat. */
+.mini-stat:last-child {
+  border-bottom: 0;
+}
+/* Estilos de icon-box. */
+.icon-box {
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: #eaf1ff;
+  color: var(--gp-blue);
+  font-weight: 800;
+}
+/* Estilos de section-pad. */
+.section-pad {
+  padding: 5rem 0;
+}
+/* Estilos de section-soft. */
+.section-soft {
+  background: var(--gp-soft);
+}
+/* Estilos de section-kicker. */
+.section-kicker {
+  color: var(--gp-blue);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+/* Estilos de section-title. */
+.section-title {
+  font-weight: 850;
+  letter-spacing: -0.04em;
+  font-size: clamp(1.9rem, 3.4vw, 3rem);
+}
+/* Estilos de section-lead. */
+.section-lead {
+  max-width: 760px;
+  color: var(--gp-muted);
+}
+/* Estilos de benefit-card, plan-card, step-card. */
+.benefit-card,
+.plan-card,
+.step-card {
+  height: 100%;
+  background: #fff;
+  border: 1px solid var(--gp-line);
+  border-radius: 1.2rem;
+}
+/* Estilos de benefit-card. */
+.benefit-card {
+  padding: 1.4rem;
+}
+/* Estilos de category-nav. */
+.category-nav {
+  display: flex;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+/* Estilos de category-nav. */
+.category-nav a {
+  border: 1px solid var(--gp-line);
+  border-radius: 99px;
+  padding: 0.65rem 1rem;
+  color: var(--gp-ink);
+  font-weight: 700;
+  text-decoration: none;
+  background: #fff;
+}
+/* Estilos de category-nav. */
+.category-nav a:hover {
+  border-color: #a9c1fb;
+  color: var(--gp-blue);
+}
+/* Estilos de category-heading. */
+.category-heading {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+/* Estilos de category-number. */
+.category-number {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  background: #eaf1ff;
+  color: var(--gp-blue);
+  font-weight: 850;
+}
+/* Estilos de plan-card. */
+.plan-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+/* Estilos de plan-card. */
+.plan-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px rgba(22, 47, 91, 0.08);
+}
+/* Estilos de plan-card-body. */
+.plan-card-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+/* Estilos de plan-card. */
+.plan-card h3 {
+  font-size: 1.2rem;
+  font-weight: 850;
+  letter-spacing: -0.025em;
+}
+/* Estilos de plan-desc. */
+.plan-desc {
+  color: var(--gp-muted);
+  font-size: 0.95rem;
+  min-height: 4.6rem;
+}
+/* Estilos de price-box. */
+.price-box {
+  background: #f6f8fc;
+  border: 1px solid var(--gp-line);
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 1rem 0;
+  min-height: 112px;
+  display: flex;
+  align-items: center;
+}
+/* Estilos de price-label. */
+.price-label {
+  font-size: 0.78rem;
+  color: var(--gp-muted);
+  font-weight: 700;
+}
+/* Estilos de price-value. */
+.price-value {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-weight: 850;
+  letter-spacing: -0.04em;
+}
+/* Estilos de price-row. */
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 0.75rem;
+  width: 100%;
+}
+/* Estilos de price-row, price-row. */
+.price-row + .price-row {
+  border-top: 1px solid var(--gp-line);
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+}
+/* Estilos de feature-list. */
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.2rem;
+}
+/* Estilos de feature-list. */
+.feature-list li {
+  position: relative;
+  padding: 0.38rem 0 0.38rem 1.5rem;
+  font-size: 0.91rem;
+}
+/* Estilos de feature-list. */
+.feature-list li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--gp-green);
+  font-weight: 900;
+}
+/* Estilos de plan-note. */
+.plan-note {
+  font-size: 0.8rem;
+  color: var(--gp-muted);
+}
+/* Estilos de plan-card, btn. */
+.plan-card .btn {
+  margin-top: 0;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Estilos de plan-card-body. */
+.plan-card-body {
+  height: 100%;
+}
+/* Estilos de plan-card, price-box. */
+.plan-card .price-box {
+  margin-top: auto;
+  flex-shrink: 0;
+}
+/* Estilos de pill. */
+.pill {
+  display: inline-block;
+  background: #eaf1ff;
+  color: var(--gp-blue-dark);
+  border-radius: 99px;
+  padding: 0.3rem 0.65rem;
+  font-size: 0.74rem;
+  font-weight: 800;
+}
+/* Estilos de step-card. */
+.step-card {
+  padding: 1.5rem;
+}
+/* Estilos de step-num. */
+.step-num {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--gp-blue);
+  line-height: 1;
+}
+/* Estilos de accordion-item. */
+.accordion-item {
+  border: 1px solid var(--gp-line) !important;
+  border-radius: 0.8rem !important;
+  overflow: hidden;
+  margin-bottom: 0.7rem;
+}
+/* Estilos de accordion-button. */
+.accordion-button {
+  font-weight: 750;
+  padding: 1.1rem 1.2rem;
+}
+/* Estilos de accordion-button, collapsed. */
+.accordion-button:not(.collapsed) {
+  background: #f0f5ff;
+  color: var(--gp-blue-dark);
+  box-shadow: none;
+}
+/* Estilos de accordion-button. */
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.2rem rgba(20, 87, 217, 0.15);
+}
+/* Estilos de final-cta. */
+.final-cta {
+  background: linear-gradient(135deg, #103d9c, #1764e8);
+  color: #fff;
+  border-radius: 1.6rem;
+  padding: clamp(2rem, 5vw, 4rem);
+}
+/* Estilos de final-cta. */
+.final-cta p {
+  color: #e1eaff;
+}
+/* Estilos de site-footer. */
+.site-footer {
+  background: #101c31;
+  color: #d8e1f1;
+}
+/* Estilos de site-footer. */
+.site-footer a {
+  color: #fff;
+}
+/* Estilos de footer-title. */
+.footer-title {
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 800;
+}
+/* Estilos de footer-muted. */
+.footer-muted {
+  color: #aebbd0;
+}
+/* Estilos de whatsapp-float. */
+.whatsapp-float {
+  position: fixed;
+  right: 1.1rem;
+  bottom: 1.1rem;
+  z-index: 1040;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  background: #16845b;
+  color: #fff;
+  border-radius: 50%;
+  padding: 0;
+  text-decoration: none;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.2);
+}
+/* Estilos de whatsapp-float. */
+.whatsapp-float svg {
+  width: 32px;
+  height: 32px;
+}
+/* Estilos de whatsapp-float. */
+.whatsapp-float:hover {
+  background: #106b49;
+  color: #fff;
+}
+/* Estilos de disclaimer. */
+.disclaimer {
+  font-size: 0.82rem;
+  color: var(--gp-muted);
+}
+/* Ajustes responsivos para (max-width: 767.98px). */
+@media (max-width: 767.98px) {
+/* Estilos de hero. */
+.hero {
+    padding: 4.5rem 0 3.5rem;
+  }
+/* Estilos de section-pad. */
+.section-pad {
+    padding: 3.7rem 0;
+  }
+/* Estilos de plan-desc. */
+.plan-desc {
+    min-height: 0;
+  }
+/* Estilos de whatsapp-float. */
+.whatsapp-float {
+    width: 54px;
+    height: 54px;
+  }
+}
+/* Ajustes responsivos para (prefers-reduced-motion: reduce). */
+@media (prefers-reduced-motion: reduce) {
+/* Estilos de html. */
+html {
+    scroll-behavior: auto;
+  }
+/* Estilos de plan-card. */
+.plan-card {
+    transition: none;
+  }
+/* Estilos de plan-card. */
+.plan-card:hover {
+    transform: none;
+  }
+}
+/* Estilos de billing-switch. */
+.billing-switch {
+  max-width: 720px;
+  text-align: center;
+  background: #f6f8fc;
+  border: 1px solid var(--gp-line);
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+}
+/* Estilos de billing-options. */
+.billing-options {
+  max-width: 360px;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+/* Estilos de billing-options, btn. */
+.billing-options .btn {
+  font-weight: 800;
+  padding: 0.7rem 1rem;
+}
+/* Estilos de billing-description. */
+.billing-description {
+  font-weight: 700;
+  color: var(--gp-ink);
+}
+/* Estilos de subscription-terms. */
+.subscription-terms {
+  background: #f6f8fc;
+  border: 1px solid var(--gp-line);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  color: var(--gp-muted);
+  font-size: 0.9rem;
+}
+/* Estilos de subscription-terms. */
+.subscription-terms strong {
+  display: block;
+  color: var(--gp-ink);
+  margin-bottom: 0.4rem;
+}
+/* Estilos de setup-strike. */
+.setup-strike {
+  font-size: 1.35rem;
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+  color: #7b8494;
+}
+/* Estilos de price-box. */
+.price-box {
+  min-height: 125px;
+}
+/* Estilos de price-detail. */
+.price-detail {
+  display: block;
+  font-size: 0.72rem;
+  line-height: 1.35;
+  color: var(--gp-muted);
+  font-weight: 650;
+  letter-spacing: 0;
+}
+/* Ajustes responsivos para (max-width: 575.98px). */
+@media (max-width: 575.98px) {
+/* Estilos de billing-switch. */
+.billing-switch {
+    padding: 1.1rem;
+  }
+/* Estilos de price-row. */
+.price-row {
+    gap: 0.4rem;
+  }
+/* Estilos de price-value. */
+.price-value {
+    font-size: 1.25rem;
+  }
+}
