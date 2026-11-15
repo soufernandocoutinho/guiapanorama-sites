@@ -38,7 +38,9 @@
   function loadMetaPixel() {
     if (!settings.pixel || window.fbq) return;
     const pixel = function () {
-      pixel.callMethod ? pixel.callMethod.apply(pixel, arguments) : pixel.queue.push(arguments);
+      pixel.callMethod
+        ? pixel.callMethod.apply(pixel, arguments)
+        : pixel.queue.push(arguments);
     };
     window.fbq = pixel;
     window._fbq = pixel;
@@ -59,9 +61,14 @@
     if (!settings.insights) return;
     const beacon = document.createElement("script");
     beacon.type = "module";
-    beacon.src = "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092";
+    beacon.src =
+      "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092";
     beacon.crossOrigin = "anonymous";
-    beacon.dataset.cfBeacon = JSON.stringify({ version: "2024.11.0", token: settings.insights, spa: 2 });
+    beacon.dataset.cfBeacon = JSON.stringify({
+      version: "2024.11.0",
+      token: settings.insights,
+      spa: 2,
+    });
     document.head.appendChild(beacon);
   }
 
@@ -70,12 +77,16 @@
     if (trackingLoaded) return;
     trackingLoaded = true;
     window.dataLayer = window.dataLayer || [];
-    window.gtag = window.gtag || function gtag() { window.dataLayer.push(arguments); };
+    window.gtag =
+      window.gtag ||
+      function gtag() {
+        window.dataLayer.push(arguments);
+      };
     window.gtag("consent", "update", {
       analytics_storage: "granted",
       ad_storage: "granted",
       ad_user_data: "granted",
-      ad_personalization: "granted"
+      ad_personalization: "granted",
     });
     loadGoogleTags();
     loadTagManager();
@@ -93,7 +104,11 @@
 
   // Salva a escolha e atualiza a disponibilidade do painel de preferências.
   function saveConsent(value) {
-    try { window.localStorage.setItem(consentKey, value); } catch (_) { /* A escolha vale durante esta visita. */ }
+    try {
+      window.localStorage.setItem(consentKey, value);
+    } catch (_) {
+      /* A escolha vale durante esta visita. */
+    }
     if (banner) banner.hidden = true;
     if (manageButton) manageButton.hidden = value === "accepted";
     if (value === "accepted") {
@@ -105,7 +120,11 @@
   }
 
   let savedConsent = null;
-  try { savedConsent = window.localStorage.getItem(consentKey); } catch (_) { /* O aviso permanece disponível se o armazenamento estiver bloqueado. */ }
+  try {
+    savedConsent = window.localStorage.getItem(consentKey);
+  } catch (_) {
+    /* O aviso permanece disponível se o armazenamento estiver bloqueado. */
+  }
   if (savedConsent === "accepted") {
     if (banner) banner.hidden = true;
     if (manageButton) manageButton.hidden = true;

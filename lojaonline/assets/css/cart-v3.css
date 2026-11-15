@@ -1,4 +1,3 @@
-
 /* Estilos de gp-domain-note. */
 /* Documentação: estilos da página, organizados por componente e comportamento responsivo. */
 .gp-domain-note {
@@ -8,7 +7,7 @@
   border-radius: 0 8px 8px 0;
   background: #f2f8f4;
   color: #536259;
-  font-size: .9rem;
+  font-size: 0.9rem;
   line-height: 1.5;
 }
 /* Estilos de gp-success-panel. */
@@ -81,8 +80,8 @@
 }
 /* Ajustes responsivos para (max-width: 575px). */
 @media (max-width: 575px) {
-/* Estilos de gp-success-summary. */
-.gp-success-summary {
+  /* Estilos de gp-success-summary. */
+  .gp-success-summary {
     padding: 13px;
   }
 }

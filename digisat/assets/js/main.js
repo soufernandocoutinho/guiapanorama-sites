@@ -19,16 +19,18 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Gancho opcional para Analytics. Nenhum rastreamento é enviado por padrão.
-  document.querySelectorAll("[data-product], [data-whatsapp]").forEach((link) => {
-    link.addEventListener("click", () => {
-      const detail = {
-        event: "whatsapp_click",
-        whatsapp_location: link.dataset.whatsapp || "produto",
-        product_name: link.dataset.product || ""
-      };
-      if (window.dataLayer && Array.isArray(window.dataLayer)) {
-        window.dataLayer.push(detail);
-      }
+  document
+    .querySelectorAll("[data-product], [data-whatsapp]")
+    .forEach((link) => {
+      link.addEventListener("click", () => {
+        const detail = {
+          event: "whatsapp_click",
+          whatsapp_location: link.dataset.whatsapp || "produto",
+          product_name: link.dataset.product || "",
+        };
+        if (window.dataLayer && Array.isArray(window.dataLayer)) {
+          window.dataLayer.push(detail);
+        }
+      });
     });
-  });
 });

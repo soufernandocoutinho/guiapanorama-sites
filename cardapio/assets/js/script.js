@@ -49,12 +49,17 @@
       const plan = button.dataset.plan;
       const message = formatMessage(plan, period);
       button.href = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-      button.setAttribute("aria-label", `Solicitar ${plan} na modalidade ${isAnnual ? "anual à vista" : "mensal"}`);
+      button.setAttribute(
+        "aria-label",
+        `Solicitar ${plan} na modalidade ${isAnnual ? "anual à vista" : "mensal"}`,
+      );
     });
   }
 
   billingButtons.forEach((button) => {
-    button.addEventListener("click", () => setBillingPeriod(button.dataset.period));
+    button.addEventListener("click", () =>
+      setBillingPeriod(button.dataset.period),
+    );
   });
 
   // Fecha o menu mobile após a escolha de uma seção.
@@ -80,7 +85,7 @@
         window.dataLayer.push({
           event: "whatsapp_click",
           destination: "guia_panorama",
-          link_text: (link.textContent || "").trim()
+          link_text: (link.textContent || "").trim(),
         });
       }
     });

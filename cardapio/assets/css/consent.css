@@ -19,8 +19,10 @@
   border-radius: 16px;
   color: #172033;
   background: #fff;
-  box-shadow: 0 16px 48px rgba(16, 24, 40, .2);
-  font: 14px/1.5 system-ui, sans-serif;
+  box-shadow: 0 16px 48px rgba(16, 24, 40, 0.2);
+  font:
+    14px/1.5 system-ui,
+    sans-serif;
 }
 
 .gp-consent-copy {
@@ -57,7 +59,9 @@
   padding: 9px 14px;
   border: 1px solid #1459b8;
   border-radius: 8px;
-  font: 700 13px/1.2 system-ui, sans-serif;
+  font:
+    700 13px/1.2 system-ui,
+    sans-serif;
   cursor: pointer;
 }
 
@@ -83,7 +87,7 @@
   z-index: 1999;
   right: 16px;
   bottom: 84px;
-  box-shadow: 0 6px 20px rgba(16, 24, 40, .18);
+  box-shadow: 0 6px 20px rgba(16, 24, 40, 0.18);
 }
 
 @media (max-width: 700px) {
