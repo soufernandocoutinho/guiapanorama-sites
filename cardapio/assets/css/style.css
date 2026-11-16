@@ -1997,3 +1997,13 @@ a {
     animation: none !important;
   }
 }
+
+/* Animação do gradiente da faixa de destaque. */
+@keyframes e103-fluxo-cor {
+  from {
+    background-position: 0% 50%;
+  }
+  to {
+    background-position: 100% 50%;
+  }
+}

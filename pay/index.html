@@ -1397,23 +1397,8 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       defer=""
     ></script>
-
-    <!-- Lógica JavaScript da página: inicialização e interações deste bloco. -->
-    <script>
-      document.getElementById("anoAtual").textContent =
-        new Date().getFullYear();
-      // Gancho simples para analytics futuro; configurar GTM/GA4 apenas com os IDs oficiais.
-      document.querySelectorAll("[data-track]").forEach(function (element) {
-        element.addEventListener("click", function () {
-          if (typeof window.dataLayer !== "undefined") {
-            window.dataLayer.push({
-              event: "landing_cta_click",
-              cta_name: element.getAttribute("data-track"),
-            });
-          }
-        });
-      });
-    </script>
+    <!-- Comportamento da página carregado do JavaScript externo. -->
+    <script src="assets/js/main.js"></script>
 
     <!-- Preferências de privacidade: ferramentas opcionais só carregam após o aceite. -->
     <section
